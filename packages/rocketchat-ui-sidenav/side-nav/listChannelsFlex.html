@@ -37,6 +37,7 @@
 			<h4>{{_ "Channels_list"}}</h4>
 			<ul>
 			{{#if showSelected}}
+			{{#each channel}}
 				<li>
 					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
 						<i class="icon-hash"></i>
