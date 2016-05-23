@@ -34,28 +34,7 @@
 					</form>
 				</div>
 			</div>
-			<h4>{{_ "Channels_list"}}</h4>
-			<ul>
-			{{#each channel}}
-				<li>
-					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
-						<i class="icon-hash"></i>
-						{{name}}
-						<span class='opt fixed'>
-							{{#if member}}
-							<i class="icon-eye" title="{{_ "Open"}}" aria-label="{{_ "Open"}}"></i>
-							{{/if}}
-						
-						</span>
-					</a>
-				</li>
-			{{/each}}
-			{{#if hasMore}}
-				<li class="load-more">
-				
-				</li>
-			{{/if}}
-			</ul>
+	
 		</div>
 	</div>
 	<footer>
