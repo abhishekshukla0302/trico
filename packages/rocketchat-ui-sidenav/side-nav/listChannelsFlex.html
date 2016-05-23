@@ -36,7 +36,7 @@
 			</div>
 			<h4>{{_ "Channels_list"}}</h4>
 			<ul>
-			{{#if sortChannelsSelected}}
+		
 			{{#each channel}}
 				<li>
 					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
@@ -53,7 +53,7 @@
 					</a>
 				</li>
 				{{/each}}
-			{{/if}}
+		
 			{{#if hasMore}}
 				<li class="load-more">
 					{{#if Template.subscriptionsReady}}
