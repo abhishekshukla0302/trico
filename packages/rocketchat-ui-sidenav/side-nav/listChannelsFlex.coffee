@@ -1,8 +1,8 @@
 Template.listChannelsFlex.helpers
 	channel: ->
-		return Template.instance().channelsList?.get()
+		return 
 	hasMore: ->
-		return Template.instance().hasMore.get()
+		return 
 	sortChannelsSelected: (sort) ->
 		return Template.instance().sortChannels.get() is sort
 	sortSubscriptionsSelected: (sort) ->
