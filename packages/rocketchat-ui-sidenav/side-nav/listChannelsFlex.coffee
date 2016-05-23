@@ -1,6 +1,6 @@
 Template.listChannelsFlex.helpers
 	channel: ->
-		return 
+		return Template.instance().channelsList?.get()
 	hasMore: ->
 		return 
 	sortChannelsSelected: (sort) ->
@@ -10,9 +10,9 @@ Template.listChannelsFlex.helpers
 	showSelected: (show) ->
 		return Template.instance().show.get() is show
 	member: ->
-		return !!RocketChat.models.Subscriptions.findOne({ name: @name, open: true })
+		return 
 	hidden: ->
-		return !!RocketChat.models.Subscriptions.findOne({ name: @name, open: false })
+		return 
 
 Template.listChannelsFlex.events
 	'click header': ->
