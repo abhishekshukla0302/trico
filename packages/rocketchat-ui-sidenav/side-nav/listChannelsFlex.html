@@ -11,6 +11,8 @@
 					<form class="search-form" role="form">
 						<div class="input-line search">
 							<select class="c-select" id="show" style="display: none">
+								<option value="joined" selected="{{showSelected 'joined'}}">{{_ "Joined"}}</option>
+								<option value="all" selected="{{showSelected 'all'}}">{{_ "All"}}</option>
 							
 							</select>
 							<i class="icon-comment"></i>
