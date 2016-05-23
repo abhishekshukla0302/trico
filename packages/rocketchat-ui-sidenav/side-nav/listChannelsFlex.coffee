@@ -62,7 +62,7 @@ Template.listChannelsFlex.events
 Template.listChannelsFlex.onCreated ->
 	@channelsList = new ReactiveVar []
 	@hasMore = new ReactiveVar true
-	@limit = new ReactiveVar 50
+	@limit = new ReactiveVar 0
 	@nameFilter = new ReactiveVar ''
 	@sortChannels = new ReactiveVar 'name'
 	@sortSubscriptions = new ReactiveVar 'name'
