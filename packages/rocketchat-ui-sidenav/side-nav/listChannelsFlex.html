@@ -10,14 +10,14 @@
 				<div class="search">
 					<form class="search-form" role="form">
 						<div class="input-line search">
-							<select class="c-select" id="show">
+							<select class="c-select" id="show" style="display: none">
 								<option value="joined" selected="{{showSelected 'joined'}}">{{_ "Joined"}}</option>
 								<option value="all" selected="{{showSelected 'all'}}">{{_ "All"}}</option>
 							</select>
 							<i class="icon-comment"></i>
 						</div>
 						<div class="input-line search">
-							<select class="c-select" id="sort-channels">
+							<select class="c-select" id="sort-channels" style="display: none">
 								<option value="name" selected="{{sortChannelsSelected 'name'}}">{{_ "Name"}}</option>
 								<option value="msgs" selected="{{sortChannelsSelected 'msgs'}}">{{_ "Number_of_messages"}}</option>
 							</select>
@@ -34,9 +34,9 @@
 					</form>
 				</div>
 			</div>
-		
+			<h4>{{_ "Channels_list"}}</h4>
 			<ul>
-		
+			{{#each channel}}
 				<li>
 					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
 						<i class="icon-hash"></i>
@@ -51,7 +51,7 @@
 						</span>
 					</a>
 				</li>
-		
+			{{/each}}
 			{{#if hasMore}}
 				<li class="load-more">
 					{{#if Template.subscriptionsReady}}
