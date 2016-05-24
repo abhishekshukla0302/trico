@@ -2,7 +2,7 @@ Template.listChannelsFlex.helpers
 	channel: ->
 		return Template.instance().channelsList?.get()
 	hasMore: ->
-		return 
+		return Template.instance().hasMore.get()
 	sortChannelsSelected: (sort) ->
 		return Template.instance().sortChannels.get() is sort
 	sortSubscriptionsSelected: (sort) ->
@@ -10,9 +10,9 @@ Template.listChannelsFlex.helpers
 	showSelected: (show) ->
 		return Template.instance().show.get() is show
 	member: ->
-		return 
+		return !!RocketChat.models.Subscriptions.findOne({ name: @name, open: true })
 	hidden: ->
-		return 
+		return !!RocketChat.models.Subscriptions.findOne({ name: @name, open: false })
 
 Template.listChannelsFlex.events
 	'click header': ->
@@ -60,13 +60,13 @@ Template.listChannelsFlex.events
 		instance.show.set(show)
 
 Template.listChannelsFlex.onCreated ->
-	@channelsList = new ReactiveVar [] 
+	@channelsList = new ReactiveVar []
 	@hasMore = new ReactiveVar true
-	@limit = new ReactiveVar 0
+	@limit = new ReactiveVar 50
 	@nameFilter = new ReactiveVar ''
 	@sortChannels = new ReactiveVar 'name'
 	@sortSubscriptions = new ReactiveVar 'name'
-	@show = new ReactiveVar 'all' 
+	@show = new ReactiveVar 'all'
 
 	@autorun =>
 		if @show.get() is 'joined'
