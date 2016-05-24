@@ -60,7 +60,7 @@ Template.listChannelsFlex.events
 		instance.show.set(show)
 
 Template.listChannelsFlex.onCreated ->
-	@channelsList = new ReactiveVar []
+	@channelsList = new ReactiveVar [] is hide
 	@hasMore = new ReactiveVar true
 	@limit = new ReactiveVar 0
 	@nameFilter = new ReactiveVar ''
