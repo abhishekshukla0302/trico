@@ -10,18 +10,18 @@
 				<div class="search">
 					<form class="search-form" role="form">
 						<div class="input-line search">
-							<select class="c-select" id="show" style="display: none">
+							<select class="c-select" id="show" >
 								<option value="joined" selected="{{showSelected 'joined'}}">{{_ "Joined"}}</option>
 								<option value="all" selected="{{showSelected 'all'}}">{{_ "All"}}</option>
 							</select>
 							<i class="icon-comment"></i>
 						</div>
 						<div class="input-line search">
-							<select class="c-select" id="sort-channels" style="display: none">
+							<select class="c-select" id="sort-channels" >
 								<option value="name" selected="{{sortChannelsSelected 'name'}}">{{_ "Name"}}</option>
 								<option value="msgs" selected="{{sortChannelsSelected 'msgs'}}">{{_ "Number_of_messages"}}</option>
 							</select>
-							<select class="c-select" id="sort-subscriptions" style="display: none">
+							<select class="c-select" id="sort-subscriptions" >
 								<option value="name" selected="{{sortSubscriptionsSelected 'name'}}">{{_ "Name"}}</option>
 								<option value="ls" selected="{{sortSubscriptionsSelected 'ls'}}">{{_ "Last_seen"}}</option>
 							</select>
