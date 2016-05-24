@@ -70,7 +70,7 @@ Template.listChannelsFlex.onCreated ->
 
 	@autorun =>
 		if @show.get() is 'joined'
-			@hasMore.set false
+			@hasMore.set true
 			options =  { fields: { name: 1 } }
 			if _.isNumber @limit.get()
 				options.limit = @limit.get()
