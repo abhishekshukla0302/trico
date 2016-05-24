@@ -66,7 +66,7 @@ Template.listChannelsFlex.onCreated ->
 	@nameFilter = new ReactiveVar ''
 	@sortChannels = new ReactiveVar 'name'
 	@sortSubscriptions = new ReactiveVar 'name'
-	@show = new ReactiveVar 'all' is hide
+	@show = new ReactiveVar 'all' 
 
 	@autorun =>
 		if @show.get() is 'joined'
