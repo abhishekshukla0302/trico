@@ -36,7 +36,7 @@
 			</div>
 			<h4>{{_ "Channels_list"}}</h4>
 			<ul>
-			
+			{{#each channel}}
 				<li>
 					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
 						<i class="icon-hash"></i>
@@ -51,7 +51,7 @@
 						</span>
 					</a>
 				</li>
-		
+			{{/each}}
 			{{#if hasMore}}
 				<li class="load-more">
 					{{#if Template.subscriptionsReady}}
